@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+  box-sizing: border-box;
+  transition: all ease-in-out 250ms;
+}
+
+html, body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.register-panel {
+  border: 1px solid;
+
+}
+
+div {
+  display: block;
+}
+
+.clearfix::after, section::after, footer::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+
+/* col system */
+
+[class^=col-] {
+  width: 100$;
+  margin-top: 1em;
+}
+
+[class^=col-]:first-child {
+	margin-top: 0;
+}
+
+.col-1 {
+	width: 100%;
+	float: left;
+}
+
+@media (min-width: 30rem) {
+  [class^=col-] {
+    float: left;
+    padding: 0 .5em;
+    margin-top: 0;
+  }
+
+  [class^=col-]:first-child {
+    padding-left: 0;
+  }
+
+  [class^=col-]:last-child {
+    padding-right: 0;
+  }
+
+  .col-3 {
+    width: 50%;
+  }
+
+  .col-1 {
+    width: 50%;
+  }
+}
+
+ /* typography */
+
+h1 {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.title {
+   font-size: 2.5rem;
+   margin-top: 2em;
+   font-weight: bolder;
+ }
+
+.title span {
+   font-weight: 500;
+   font-size: .75em;
+   display: block;
+}
+
+.unstyled-list {
+   list-style: none;
+   text-decoration: none;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+ }
+
+.welcome {
+  font-weight: bolder;
+  font-size: 2.5rem;
+  margin-top: 1em;
+}
+
+.welcome span {
+  font-weight: 500;
+  font-size: .75em;
+  display: block;
+}
+
+@media (min-width: 60rem) {
+  .title {
+     font-size: 2.5rem;
+   }
+
+   .welcome {
+      font-size: 2.5rem;
+    }
+}
+
+ /* home-hero */
+
+ .home-hero {
+   padding: 10em 0;
+   background-image: url(../images/welcome-page.png);
+   background-position: center;
+   background-size: cover;
+   color: white;
+ }
+
+@media (min-width: 60rem) {
+   .home-hero {
+     height: 100vh;
+     padding-top: 35vh;
+   }
+}
+
+/* register */
+
+.register-box {
+  width: 320px;
+  height: 510px;
+  background: #6cc2bd;
+  color: white;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  border-radius: 30px;
+  margin: 15em 0;
+  padding: 30px 30px 0;
+}
+
+.register-box p {
+  text-align: left;
+  padding-left: 10px;
+  font-size: 15px;
+  margin-top: 3px;
+}
+
+.register-box input {
+  width: 100%;
+}
+
+.register-box input[type="text"], input[type="password"] {
+  border: 1px solid #C0C0C0;
+  border-radius: 5px;
+  height: 45px;
+  font-size: 16px;
+}
+
+.register-box input[type="submit"] {
+  border: none;
+  outline: none;
+  height: 45px;
+  font-size: 16px;
+  background: #00877d;
+  color: white;
+  border-radius: 5px;
+}
+
+.register-box input[type="submit"]:hover {
+  cursor: pointer;
+  background: #329f97;
+  color: black;
+}
+
+.register-box a {
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.register-box a:hover {
+  cursor: pointer;
+  color: #666d6d;
+}
+
+.register-panel {
+  background-image: url(../images/welcome-page.png);
+  background-position: center;
+  background-size: cover;
+}
+
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+ /* button */
+
+ .button {
+   display: inline-block;
+   font-size: 1.5rem;
+   text-decoration: none;
+   text-transform: uppercase;
+   border-width: 2px;
+   border-style: solid;
+   border-radius: 40px;
+   padding: .5em 1.5em;
+   margin: 1rem;
+ }
+
+.button-accent {
+  color: #111122;
+  background: #ffc1a6;
+  border-color: #111122;
+}
+
+.button-accent:hover, .button-accent:focus {
+  color: #F0F0F1;
+  background: #ff77aa;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 70%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity: 2;
+}
+
+.cancel-button {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+.cancel-button, .register-button {
+  float: left;
+  width: 50%;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+@media (min-width: 60rem) {
+  .button {
+    font-size: 1.5rem;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+/* parallax */
+
+.parallax--bg, .parallax--box {
+  transition: initial;
+}
+
+/* header */
+
+header {
+  margin: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  background-color: #afe7d8;
+  background-size: cover;
+}
+
+nav ul {
+ margin: 0;
+ padding: 0;
+ list-style: none;
+}
+
+nav li {
+ display: inline-block;
+ margin: 1em;
+}
+
+nav a {
+ font-weight: bold;
+ text-decoration: none;
+ text-transform: uppercase;
+ font-size: 1rem;
+ padding: .5em;
+ color: #111122;
+}
+
+nav a:hover, nav a:focus {
+ color: #70707A;
+}
+
+@media (min-width: 60rem) {
+  nav {
+    float: right;
+  }
+
+  .logo {
+    float: left;
+  }
+}
+
+
+/* home-hero */
+
+.home-about-textbox {
+  background-color: #24333F;
+  padding: 3em;
+	width: 100vw;
+  margin-left: -6%;
+  color: #fff;
+  position: static;
+}
+
+.home-about-textbox h1 {
+  color: #fff;
+}
+
+/* tutorial */
+
+.unstyled-list-tut {
+  text-decoration: none;
+  list-style: none;
+  padding: 1em;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.tutorial {
+  padding: 3em;
+  background: #5a809e;
+  margin-left: -6%;
+	width: 100vw;
+  color: #fff;
+}
+
+/* profile */
+
+.profile {
+  margin: 2em 0 0;
+  background-image: url(../images/about-us-bg.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.profile h1 {
+  padding-bottom: 1em;
+  background: white;
+}
+
+.prof-pic {
+  margin: 0;
+  position: relative;
+}
+
+.prof-pic img {
+  display: inline-block;
+}
+
+.profile-desc {
+  position: absolute;
+  z-index: 100;
+  bottom: 0em;
+  left: 0em;
+  right: 0em;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
+
+.profile-desc p {
+  margin: 5px;
+}
+
+@media (min-width: 30rem) {
+   .prof-pic {
+     width: 50%;
+     float: left;
+   }
+}
+
+@media (min-width: 60rem) {
+   .prof-pic {
+     width: 25%;
+     overflow: hidden;
+   }
+
+   .profile-desc {
+     transform: translateY(120%);
+   }
+
+   .prof-pic:hover .profile-desc {
+     transform: translateY(0%);
+   }
+}
+
+/* footer */
+
+footer {
+  background: #111122;
+  color: white;
+  text-align: left;
+  padding: 3.5em 0;
+}

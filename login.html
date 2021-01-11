@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DupliArt Sign in/Login</title>
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+
+</head>
+  <body>
+    <header>
+    	<img src="images/DupliArtLogo.png" alt="ourLogo" class="logo">
+    	<nav>
+    		<ul>
+    			<li><a href="">Contact</a></li>
+    		</ul>
+    	</nav>
+    </header>
+
+<div class="register-panel">
+  <div id="page" class="widepage">
+    <h1 class="welcome">Welcome to DupliArt!
+		</h1>
+
+  <div class="register-box">
+    <h1> Sign in / Login </h1>
+    <form action="register.php" method="post">
+      <input type="text" name="" placeholder="Username">
+      <input type="text" name="" placeholder="Email">
+      <input type="text" name="" placeholder="Password">
+      <input type="submit" name="" value="Register"><br>
+        <a href="#">Already have an account?</a><br>
+      <p>Or sign in with...</p>
+      <figcaption class="login-goo">
+        <a href="" target="_blank" rel="noopener noreferrer"> <image src="images/fb.png"></a>
+    </form>
+  </div>
+
+<div class="regis-log-php">
+  <?php include 'register.php';?>
+</div>
+
+  <footer>
+  	<div class="container">
+  		<div class="col-3">
+  			<p>
+  				DupliArt is a temporary reverse image search website engine created by
+  				four Multimedia students from University of Malaya for a project assignment.
+  			</p>
+  		</div>
+
+  		<div class="col-1">
+  			<ul class="unstyled-list">
+  				<li><strong>Directory</strong></li>
+  				<li><a href="">Faculty of Computer Science and Information Technology</a></li>
+  				<li><a href="">University of Malaya</a></li>
+  			</ul>
+  		</div>
+  	</div>
+  </footer>
+  </body>
+</head>

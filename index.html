@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>DupliArt</title>
 <link href="css/styles.css" rel="stylesheet" type="text/css">
+<link href="css/uploadImg.css" rel="stylesheet" type="text/css">
+
 </head>
 
 <body>
@@ -13,7 +15,7 @@
 	<img src="images/DupliArtLogo.png" alt="ourLogo" class="logo">
 	<nav>
 		<ul>
-			<li><a href="">Sign in / Login</a></li>
+			<li><a href="login.html">Sign in / Login</a></li>
 			<li><a href="">Contact</a></li>
 		</ul>
 	</nav>
@@ -25,10 +27,30 @@
 			<span>where you can search for any images that may look similar to yours!
 			</span>
 		</h1>
-		<a href="" class="button button-accent">Upload image</a>
+		<div id="sectionbg">
+			<div id="uplo-section" class="container-i text-center">
+				<form role="form" method="post" enctype="multipart/form-data" action="uploadImg#sectionbg">
+					<div></div>
+					<div>
+					<label class="fileContainer">
+						Upload image
+						<input type="file" id="inputfile" name="uploaded_image" accept="image/png, image/jpeg, image/gif" required="true" onchange="imagePreview(event);" title="Upload your artwork here!">
+					</label>
+				</div>
+			</form>
+		</div>
+		<div id="imageContainer" class="container-b text-center">
+			<img src="" id="imageBox" class="img img-thumbnail" alt="no preview since no image uploaded">
+	    <!--	<input type="submit" name="submit-similar-img" id="uploadbutton" value="Search similar images" class="btn btn-default"> -->
+			<div id="withGoogle" class=""><p class='highlight'><p class='highlight2'>See matches on <a href="" target='_blank'>Google</a></p></div>
+<!--	<form role="form" method="post" enctype="multipart/form-data" onclick="myFunction()">
+		 <input type="submit" name="report-button" id="report-button" value="Report" class="btn btn-report"> -->
+		 <div class="popup" onclick="myFunction()">Report
+		 <span class="popuptext" id="reportPopup">Reported!</span></div>
+			</div>
 	</div>
+</div>
 </section>
-
 
 <div class="container">
 <section class="home-about">
@@ -71,45 +93,45 @@
 		<figcaption class="profile-desc">
 			<p>Sofia</p>
 			<p>Put little description here</p>
-			<a href="https://www.facebook.com/MissKotak" target="_blank" rel="noopener noreferrer"> <image src="images/fb.png"> </a>
-			<a href="https://thenwtf.tumblr.com" target="_blank" rel="noopener noreferrer"> <image src="images/tumblr.png"> </a>
-			<a href="https://discordapp.com/users/159985870458322944/" target="_blank" rel="noopener noreferrer"> <image src="images/discord.png"> </a>
+			<a href="https://www.facebook.com/MissKotak" target="_blank" rel="noopener noreferrer" title="Facebook"> <image src="images/fb.png"> </a>
+			<a href="https://instagram.com" target="_blank" rel="noopener noreferrer"> <image src="images/ig.png" title="Tumblr"> </a>
+			<a href="https://twitter.com" target="_blank" rel="noopener noreferrer" title="Twitter"> <image src="images/twt.png"> </a>
 		</figcaption>
 	</figure>
 
 	<!-- ain -->
 	<figure class="prof-pic">
-		<img src="images/sofia_f.png" alt="profile picture">
+		<img src="images/ain.png" alt="profile picture">
 		<figcaption class="profile-desc">
 			<p>Ain</p>
 			<p>Put little description here</p>
-			<a href="https://www.facebook.com/MissKotak" target="_blank" rel="noopener noreferrer"> <image src="images/fb.png"> </a>
-			<a href="https://thenwtf.tumblr.com" target="_blank" rel="noopener noreferrer"> <image src="images/tumblr.png"> </a>
-			<a href="https://discordapp.com/users/159985870458322944/" target="_blank" rel="noopener noreferrer"> <image src="images/discord.png"> </a>
+			<a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook"> <image src="images/fb.png"> </a>
+			<a href="https://instagram.com" target="_blank" rel="noopener noreferrer"> <image src="images/ig.png" title="Tumblr"> </a>
+			<a href="https://twitter.com" target="_blank" rel="noopener noreferrer"> <image src="images/twt.png"> </a>
 		</figcaption>
 	</figure>
 
 	<!-- aisyah -->
 	<figure class="prof-pic">
-		<img src="images/sofia_f.png" alt="profile picture">
+		<img src="images/aisyah.png" alt="profile picture">
 		<figcaption class="profile-desc">
 			<p>Aisyah</p>
 			<p>Put little description here</p>
-			<a href="https://www.facebook.com/MissKotak" target="_blank" rel="noopener noreferrer"> <image src="images/fb.png"> </a>
-			<a href="https://thenwtf.tumblr.com" target="_blank" rel="noopener noreferrer"> <image src="images/tumblr.png"> </a>
-			<a href="https://discordapp.com/users/159985870458322944/" target="_blank" rel="noopener noreferrer"> <image src="images/discord.png"> </a>
+			<a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook"> <image src="images/fb.png"> </a>
+			<a href="https://instagram.com" target="_blank" rel="noopener noreferrer"> <image src="images/ig.png"> </a>
+			<a href="https://twitter.com" target="_blank" rel="noopener noreferrer"> <image src="images/twt.png"> </a>
 		</figcaption>
 	</figure>
 
 	<!-- mel -->
 	<figure class="prof-pic">
-		<img src="images/sofia_f.png" alt="profile picture">
+		<img src="images/mel.png" alt="profile picture">
 		<figcaption class="profile-desc">
 			<p>Mel</p>
 			<p>Put little description here</p>
-			<a href="https://www.facebook.com/MissKotak" target="_blank" rel="noopener noreferrer"> <image src="images/fb.png"> </a>
-			<a href="https://thenwtf.tumblr.com" target="_blank" rel="noopener noreferrer"> <image src="images/tumblr.png"> </a>
-			<a href="https://discordapp.com/users/159985870458322944/" target="_blank" rel="noopener noreferrer"> <image src="images/discord.png"> </a>
+			<a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook"> <image src="images/fb.png"> </a>
+			<a href="https://instagram.com" target="_blank" rel="noopener noreferrer"> <image src="images/ig.png"> </a>
+			<a href="https://twitter.com" target="_blank" rel="noopener noreferrer"> <image src="images/twt.png"> </a>
 		</figcaption>
 	</figure>
 </section>
@@ -126,19 +148,23 @@
 		<div class="col-1">
 			<ul class="unstyled-list">
 				<li><strong>Directory</strong></li>
-				<li><a href="">Faculty of Computer Science and Information Technology</a></li>
-				<li><a href="">University of Malaya</a></li>
+				<li><a href="https://fsktm.um.edu.my/" target="_blank" rel="noopener noreferrer">Faculty of Computer Science and Information Technology</a></li>
+				<li><a href="https://www.um.edu.my/" target="_blank" rel="noopener noreferrer">University of Malaya</a></li>
 			</ul>
 		</div>
 	</div>
 </footer>
-
-
-<script
-  src="https://code.jquery.com/jquery-2.2.4.min.js"
-  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-  crossorigin="anonymous"></script>
-
-		<script src="js/parallax.js"></script>
+<script src="js/parallax.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </body>
+<script type="text/javascript" src="js/imageAppear.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script>
+	// When the user clicks on <div>, open the popup
+	function myFunction() {
+	  var popup = document.getElementById("reportPopup");
+	  popup.classList.toggle("show");
+	}
+</script>
 </html>

@@ -17,6 +17,7 @@ html, body {
 img {
   max-width: 100%;
   height: auto;
+  /* vertical-align: middle; */
 }
 
 .container {
@@ -24,18 +25,16 @@ img {
   margin: 0 auto;
 }
 
-.register-panel {
-  border: 1px solid;
-
-}
-
 div {
   display: block;
 }
 
+button, input[type=button], input[type=reset], input[type=submit] {
+  cursor: pointer;
+}
+
 .clearfix::after, section::after, footer::after {
   content: '';
-  display: block;
   clear: both;
 }
 
@@ -89,7 +88,6 @@ h1 {
 
 .title {
    font-size: 2.5rem;
-   margin-top: 2em;
    font-weight: bolder;
  }
 
@@ -107,60 +105,74 @@ h1 {
    text-align: left;
  }
 
-.welcome {
-  font-weight: bolder;
-  font-size: 2.5rem;
-  margin-top: 1em;
-}
-
-.welcome span {
-  font-weight: 500;
-  font-size: .75em;
-  display: block;
-}
-
-@media (min-width: 60rem) {
+@media (min-width: 320px) {
   .title {
      font-size: 2.5rem;
+     margin-top: 2.3em;
    }
-
-   .welcome {
-      font-size: 2.5rem;
-    }
 }
 
  /* home-hero */
 
  .home-hero {
-   padding: 10em 0;
-   background-image: url(../images/welcome-page.png);
-   background-position: center;
+   padding: 10em 0 30em;
+   background-image: url(../images/welcome-bg-1.png);
    background-size: cover;
+   background-position: center;
    color: white;
  }
 
-@media (min-width: 60rem) {
+
+@media (min-width: 30rem) {
    .home-hero {
-     height: 100vh;
+     width: 98.7vw;
      padding-top: 35vh;
    }
 }
 
-/* register */
+.home-hero:after {
+  width: 98.7vw;
+}
+
+/* register & login page */
+
+.welcome {
+  margin: 1.5em 0;
+}
+
+.register-panel {
+  padding: 10em 0 40em;
+  background-image: url(../images/welcome-bg-1.png);
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
 
 .register-box {
-  width: 320px;
-  height: 510px;
+  max-width: 320px;
+  height: 520px;
   background: #6cc2bd;
   color: white;
-  top: 50%;
-  left: 50%;
-  position: absolute;
-  transform: translate(-50%, -50%);
+  position: relative;
   box-sizing: border-box;
   border-radius: 30px;
-  margin: 15em 0;
-  padding: 30px 30px 0;
+  margin: 2em auto;
+  padding: 30px;
+}
+
+.login-box {
+  max-width: 320px;
+  z-index: 1;
+  height: 450px;
+  background: #eab2ff;
+  color: white;
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 30px;
+  margin: 2em auto;
+  padding: 30px;
+
+  display: none;
 }
 
 .register-box p {
@@ -170,7 +182,18 @@ h1 {
   margin-top: 3px;
 }
 
+.login-box p {
+  text-align: left;
+  padding-left: 10px;
+  font-size: 15px;
+  margin-top: 3px;
+}
+
 .register-box input {
+  width: 100%;
+}
+
+.login-box input {
   width: 100%;
 }
 
@@ -208,12 +231,39 @@ h1 {
   color: #666d6d;
 }
 
-.register-panel {
-  background-image: url(../images/welcome-page.png);
-  background-position: center;
-  background-size: cover;
+.login-box input[type="text"], input[type="password"] {
+  border: 1px solid #C0C0C0;
+  border-radius: 5px;
+  height: 45px;
+  font-size: 16px;
 }
 
+.login-box input[type="submit"] {
+  border: none;
+  outline: none;
+  height: 45px;
+  font-size: 16px;
+  background: #dc7fff;
+  color: white;
+  border-radius: 5px;
+}
+
+.login-box input[type="submit"]:hover {
+  cursor: pointer;
+  background: #e398ff;
+  color: black;
+}
+
+.login-box a {
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.login-box a:hover {
+  cursor: pointer;
+  color: #666d6d;
+}
 
 input[type=text], input[type=password] {
   width: 100%;
@@ -227,6 +277,13 @@ input[type=text], input[type=password] {
 input[type=text]:focus, input[type=password]:focus {
   background-color: #ddd;
   outline: none;
+}
+
+@media (min-width: 60rem) {
+   .register-panel {
+     width: 100vw;
+     padding-top: 25vh;
+   }
 }
 
  /* button */
@@ -267,16 +324,6 @@ button {
 
 button:hover {
   opacity: 2;
-}
-
-.cancel-button {
-  padding: 14px 20px;
-  background-color: #f44336;
-}
-
-.cancel-button, .register-button {
-  float: left;
-  width: 50%;
 }
 
 .clearfix::after {
@@ -346,13 +393,12 @@ nav a:hover, nav a:focus {
   }
 }
 
-
 /* home-hero */
 
 .home-about-textbox {
   background-color: #24333F;
   padding: 3em;
-	width: 100vw;
+	width: 99.15vw;
   margin-left: -6%;
   color: #fff;
   position: static;
@@ -376,7 +422,7 @@ nav a:hover, nav a:focus {
   padding: 3em;
   background: #5a809e;
   margin-left: -6%;
-	width: 100vw;
+	width: 99.15vw;
   color: #fff;
 }
 

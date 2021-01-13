@@ -17,24 +17,39 @@
     	</nav>
     </header>
 
-<div class="register-panel">
-  <div id="page" class="widepage">
-    <h1 class="welcome">Welcome to DupliArt!
-		</h1>
+<section class="register-panel parallax--bg">
+  <div class="container">
+    <h1 class="welcome parallax--box">Welcome to DupliArt!
+    </h1>
+  </div>
 
   <div class="register-box">
-    <h1> Sign in / Login </h1>
-    <form action="register.php" method="post">
+    <h1> Sign in </h1>
+    <form action="register.php" method="post" class="register-form">
       <input type="text" name="" placeholder="Username">
       <input type="text" name="" placeholder="Email">
       <input type="text" name="" placeholder="Password">
       <input type="submit" name="" value="Register"><br>
-        <a href="#">Already have an account?</a><br>
+        <a href="">Already have an account?</a><br>
       <p>Or sign in with...</p>
       <figcaption class="login-goo">
         <a href="" target="_blank" rel="noopener noreferrer"> <image src="images/fb.png"></a>
     </form>
   </div>
+
+  <div class="login-box">
+    <h1>Login</h1>
+    <form action="" method="" class="login-form">
+      <input type="text" name="" placeholder="Username">
+      <input type="text" name="" placeholder="Password">
+      <input type="submit" name="" value="Login"><br>
+      <a href="">Haven't registered yet?</a><br>
+      <p>Or sign in with...</p>
+      <figcaption class="login-goo">
+        <a href="" target="_blank" rel="noopener noreferrer"> <image src="images/fb.png"></a>
+    </form>
+  </div>
+</section>
 
 <div class="regis-log-php">
   <?php include 'register.php';?>
@@ -52,11 +67,11 @@
   		<div class="col-1">
   			<ul class="unstyled-list">
   				<li><strong>Directory</strong></li>
-  				<li><a href="">Faculty of Computer Science and Information Technology</a></li>
-  				<li><a href="">University of Malaya</a></li>
+  				<li><a href="https://fsktm.um.edu.my/" target="_blank" rel="noopener noreferrer">Faculty of Computer Science and Information Technology</a></li>
+  				<li><a href="https://www.um.edu.my/" target="_blank" rel="noopener noreferrer">University of Malaya</a></li>
   			</ul>
   		</div>
   	</div>
   </footer>
   </body>
-</head>
+</html>

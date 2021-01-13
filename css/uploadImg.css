@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:after, :before {
+  box-sizing: border-box;
+}
+
+
+form {
+   display: block;
+   margin-top: 0em;
+}
+
+.fileContainer [type=file] {
+  cursor: pointer;
+  display: block;
+  font-size: 20px;
+  filter: alpha(opacity=0);
+  min-height: 100%;
+  min-width: 100%;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  top: 0;
+}
+
+.fileContainer {
+  overflow: hidden;
+  position: relative;
+  background: #ffc1a6;
+  padding: .5em;
+  color: #111122;
+  border-color: #111122;
+  max-width: 500px;
+  display: inline-block;
+  font-size: 1.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 40px;
+  padding: .5em 1.5em;
+  margin: 1rem;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 5px;
+  font-weight: 570;
+}
+
+#sectionbg {
+  padding: 0;
+}
+
+#uplo-section {
+  border: none;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.container-i {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container-i section-bg {
+  margin-right: auto;
+  margin-bottom: auto;
+}
+
+.container-b {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container-b section-bg {
+  margin-right: auto;
+  margin-bottom: auto;
+}
+
+@media (min-width: 30rem) {
+  .container-b {
+    float: left;
+    padding: 0 .5em;
+    margin-top: 0;
+    margin-left: 5em;
+  }
+
+  container-b:first-child {
+    padding-left: 0;
+  }
+
+  container-b:last-child {
+    padding-right: 0;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+#uploadbutton {
+  background: #8ddcff;
+  color: #111122;
+  max-width: 500px;
+  display: inline-block;
+  font-size: 1.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 40px;
+  padding: .5em 1.5em;
+  border-color: #111122;
+}
+
+#uploadbutton:hover {
+  background: #466e7f;
+  color: #F0F0F1;
+}
+
+.fileContainer:hover, .fileContainer:focus {
+  color: #F0F0F1;
+  background: #ff77aa;
+}
+
+.btn, select {
+  font-size: 12px;
+}
+
+.btn {
+  display: inline-block;
+  margin-bottom: 0;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  background-image: none;
+  padding: 6px 12px;
+  user-select: none;
+}
+
+.btn-default {
+  color: #111122;
+  background-color: white;
+  border-color: #ccc;
+}
+
+input {
+  color: #555;
+  line-height: normal;
+}
+
+button, input, select, textarea, optgroup {
+  font-family: inherit;
+  margin: 0;
+}
+
+#imageContainer {
+  width: 250px;
+  text-align: center;
+  display: none;
+}
+
+#imageBox {
+  height: 200px;
+  width: 200px;
+}
+
+.img-thumbnail {
+  padding: 4px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: all .2s ease-in-out;
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+input[type=file] {
+  display: block;
+}
+
+@media (min-width: 60rem) {
+  #uplo-section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  #uploadbutton {
+    margin-top: 10px;
+  }
+
+  #sectionbg {
+    margin-top: 0;
+  }
+
+  #inputfile {
+    margin-bottom: 30px;
+		width: 220px;
+		padding-left: unset;
+		font-size: 15px;
+  }
+}
+
+.highlight{
+	color: red;
+	font-size: 22px;
+}
+
+.highlight2{
+	color: #000;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+p {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+p > a {
+	color:#3498db;
+	text-decoration: none;
+	transition: color 0.2s linear;
+}
+
+p > a:visited {
+	color:#3498db;
+	text-decoration: none;
+}
+
+p > a:hover {
+	color:#2980b9;
+	text-decoration: none;
+}
+
+input {
+	color: #555;
+}
+
+/* report */
+
+.popup {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+
+  background: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  overflow: hidden;
+  padding: .5em;
+  color: #111122;
+  border-color: #111122;
+  max-width: 500px;
+  font-size: 1.5rem;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 40px;
+  padding: .5em 1.5em;
+  margin: 1rem;
+}
+
+.popup .popuptext {
+  visibility: hidden;
+  background-color: #555;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}

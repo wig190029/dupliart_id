@@ -18,3 +18,26 @@ $(document).ready(function(){
     image_height.val(custom_height);
   });
 });
+
+function uploImg() {
+
+	var imageBox = document.getElementById("imageBox");
+
+	imageBox.innerHTML = "GOOGLE";
+
+	function GFG_Fun() {
+		// create anchor element (in this case, googleimage)
+		var a = document.createElement('a');
+
+		// create text for a
+		var link = document.createTextNode("Find matches in Google");
+
+		// append the text to anchor
+		a.AppendChild(link);
+
+		// set href property
+		a.href = "https://www.google.com/searchbyimage?image_url="
+
+	}
+
+}

@@ -6,6 +6,10 @@
 <title>DupliArt</title>
 <link href="css/styles.css" rel="stylesheet" type="text/css">
 <link href="css/uploadImg.css" rel="stylesheet" type="text/css">
+<!-- <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css"> -->
+<link rel="stylesheet/less" type="text/css" href="styles.less" />
+
 
 </head>
 
@@ -29,7 +33,8 @@
 		</h1>
 		<div id="sectionbg">
 			<div id="uplo-section" class="container-i text-center">
-				<form role="form" method="post" enctype="multipart/form-data" action="uploadImg#sectionbg">
+
+				<form role="form" method="post" enctype="multipart/form-data" action="index.html#sectionbg">
 					<div></div>
 					<div>
 					<label class="fileContainer">
@@ -37,20 +42,27 @@
 						<input type="file" id="inputfile" name="uploaded_image" accept="image/png, image/jpeg, image/gif" required="true" onchange="imagePreview(event);" title="Upload your artwork here!">
 					</label>
 				</div>
+				<br>
+			<!--	<input type="submit" name="submit-similar-img" id="uploadbutton" value="Search similar images" class="btn btn-default"> -->
+
 			</form>
 		</div>
 		<div id="imageContainer" class="container-b text-center">
 			<img src="" id="imageBox" class="img img-thumbnail" alt="no preview since no image uploaded">
-	    <!--	<input type="submit" name="submit-similar-img" id="uploadbutton" value="Search similar images" class="btn btn-default"> -->
-			<div id="withGoogle" class=""><p class='highlight'><p class='highlight2'>See matches on <a href="" target='_blank'>Google</a></p></div>
-<!--	<form role="form" method="post" enctype="multipart/form-data" onclick="myFunction()">
-		 <input type="submit" name="report-button" id="report-button" value="Report" class="btn btn-report"> -->
-		 <div class="popup" onclick="myFunction()">Report
-		 <span class="popuptext" id="reportPopup">Reported!</span></div>
-			</div>
+			<div class='alert alert-success'>
+				<p class='highlight2'><a href='https://www.google.com/searchbyimage?image_url=' target='_blank'>Find matches in Google </a></p></div>
+			<div class='alert alert-success'>
+				<p class='highlight2'><a href='https://yandex.com/images/' target='_blank'>Find matches in Yandex </a></p></div>
+			<input type="text" name="" placeholder="Insert the searched images URL here"><p class='highlight'></p>
+			<div class="popup" onclick="reportButtonPopup()">Report</div>
+		<!--	<div id="withGoogle" class=""><p class='highlight'><p class='highlight2'>See matches on <a href="" target='_blank' onclick="withGoogle(event)">Google</a></p></div> -->
+</div>
 	</div>
 </div>
 </section>
+
+<script>
+</script>
 
 <div class="container">
 <section class="home-about">
@@ -155,16 +167,17 @@
 	</div>
 </footer>
 <script src="js/parallax.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.min.js"></script>
 </body>
 <script type="text/javascript" src="js/imageAppear.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
+
 <script>
-	// When the user clicks on <div>, open the popup
-	function myFunction() {
-	  var popup = document.getElementById("reportPopup");
-	  popup.classList.toggle("show");
+	function reportButtonPopup() {
+	  alert("Reported! Thank you very much for using DupliArt!");
 	}
 </script>
+
+<script src="//cdn.jsdelivr.net/npm/less@3.13" ></script>
 </html>

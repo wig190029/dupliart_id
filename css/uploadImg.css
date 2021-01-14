@@ -4,6 +4,9 @@
   box-sizing: border-box;
 }
 
+[hidden] {
+  display: none;
+}
 
 form {
    display: block;
@@ -50,7 +53,7 @@ label {
 }
 
 #sectionbg {
-  padding: 0;
+	padding: 0;
 }
 
 #uplo-section {
@@ -88,7 +91,7 @@ label {
     float: left;
     padding: 0 .5em;
     margin-top: 0;
-    margin-left: 5em;
+    margin-left: auto;
   }
 
   container-b:first-child {
@@ -162,22 +165,35 @@ button, input, select, textarea, optgroup {
 }
 
 #imageContainer {
-  width: 250px;
   text-align: center;
   display: none;
+  margin-left: 3em 0;
+}
+
+#imageContainer [type="text"] {
+  width: 30%;
+  margin: 0;
+  padding: 15px;
+  display: inline-block;
+  border: none;
 }
 
 #imageBox {
   height: 200px;
-  width: 200px;
+  width: 250px;
+  display: none;
+  margin-left: 27em;
+}
+
+#actioncontainer {
+  width: 700px;
+  margin-top: 20px;
 }
 
 .img-thumbnail {
   padding: 4px;
   line-height: 1.42857143;
   background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 4px;
   transition: all .2s ease-in-out;
   display: inline-block;
   max-width: 100%;
@@ -204,6 +220,10 @@ input[type=file] {
     margin-top: 0;
   }
 
+  #actioncontainer {
+    width: unset;
+  }
+
   #inputfile {
     margin-bottom: 30px;
 		width: 220px;
@@ -218,9 +238,24 @@ input[type=file] {
 }
 
 .highlight2{
-	color: #000;
-	font-size: 20px;
-	font-weight: bold;
+  background-color: #EFEFEF;
+  color: #111122;
+  border-color: #111122;
+
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+
+  text-transform: uppercase;
+  text-decoration: none;
+  overflow: hidden;
+  max-width: 500px;
+  font-size: 1.5rem;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 40px;
+  padding: .5em 1.5em;
+  margin: 1rem;
 }
 
 p {
@@ -255,13 +290,39 @@ input {
   cursor: pointer;
   display: inline-block;
 
-  background: white;
+  background: #FF3232;
   text-transform: uppercase;
   text-decoration: none;
   overflow: hidden;
   padding: .5em;
   color: #111122;
   border-color: #111122;
+  max-width: 500px;
+  font-size: 1.5rem;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 40px;
+  padding: .5em 1.5em;
+  margin: 1rem;
+}
+
+.popup:hover {
+  color: #F0F0F1;
+  background: red;
+}
+
+.alert .alert-success {
+  background-color: #EFEFEF;
+  color: #111122;
+  border-color: #111122;
+
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+
+  text-transform: uppercase;
+  text-decoration: none;
+  overflow: hidden;
   max-width: 500px;
   font-size: 1.5rem;
   border-width: 2px;
@@ -301,4 +362,40 @@ input {
 @keyframes fadeIn {
   from {opacity: 0;}
   to {opacity:1 ;}
+}
+
+/* goog&yand */
+
+[class=^alert] {
+  width: 100$;
+  margin-top: 1em;
+}
+
+[class^=alert]:first-child {
+	margin-top: 0;
+}
+
+.alert {
+	width: 100%;
+	float: left;
+}
+
+@media (min-width: 30rem) {
+  [class^=alert] {
+    float: left;
+    padding: 0 .5em;
+    margin-top: 0;
+  }
+
+  [class^=alert]:first-child {
+    padding-left: 0;
+  }
+
+  [class^=alert]:last-child {
+    padding-right: 0;
+  }
+
+  .alert {
+    width: 50%;
+  }
 }

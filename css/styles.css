@@ -20,6 +20,10 @@ img {
   /* vertical-align: middle; */
 }
 
+figcaption img {
+  padding: 0 13px;
+}
+
 .container {
   width: 90%;
   margin: 0 auto;
@@ -281,7 +285,7 @@ input[type=text]:focus, input[type=password]:focus {
 
 @media (min-width: 60rem) {
    .register-panel {
-     width: 100vw;
+     width: 98.7vw;
      padding-top: 25vh;
    }
 }
